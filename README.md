@@ -1,4 +1,4 @@
-# X URL Generator App
+# X Finder General
 
 A JavaScript application (OOP-based) for generating and displaying profile, list, and community URLs from [X (formerly Twitter)](https://x.com), featuring OAuth 2.0 support, token refresh, local storage, and filtered blocked users.
 
@@ -26,11 +26,11 @@ A JavaScript application (OOP-based) for generating and displaying profile, list
 1. Clone or download this project:
 
    ```bash
-   git clone https://github.com/your-username/my-project.git
-   cd my-project
+   git clone https://github.com/andrealba/x-finder-general.git
+   cd x-finder-general
    ```
 
-2. Open `x-url-generator.html` in your browser directly, or launch a local server:
+2. Open `index.html` in your browser directly, or launch a local server:
 
    ```bash
    # With Python 3
@@ -50,16 +50,15 @@ A JavaScript application (OOP-based) for generating and displaying profile, list
 
 ## 🌐 Deploying on GitHub Pages
 
-1. Copy `x-url-generator.html` to your repo root.
-2. (Optional) Rename to `index.html`.
-3. In GitHub > Settings > Pages:
+1. Copy `x-finder-general.html` to your repo root.
+2. In GitHub > Settings > Pages:
 
    - Set source to `main` branch, root folder (`/`).
 
-4. After deployment, add the following URI in your app settings on X Developer Portal:
+3. After deployment, add the following URI in your app settings on X Developer Portal:
 
    ```
-   https://your-username.github.io/my-project
+   https://andrealba.github.io/x-finder-general
    ```
 
 ---
