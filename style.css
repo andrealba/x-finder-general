@@ -1,0 +1,56 @@
+/* styles.css - Stylesheet for X URL Generator */
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f8fa;
+}
+
+input,
+button {
+  padding: 10px;
+  margin: 5px;
+  width: 300px;
+}
+
+.status {
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status.valid {
+  color: #2ecc71;
+}
+
+.status.invalid {
+  color: #e74c3c;
+}
+
+.tab {
+  margin: 10px 0;
+}
+
+.x-tab a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #1da1f2;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.x-tab a:hover {
+  background-color: #0d8ddb;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
