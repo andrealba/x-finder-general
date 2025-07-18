@@ -1,18 +1,27 @@
 /* styles.css - Stylesheet for X URL Generator */
 
+/* Base styles for body and font */
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
   background-color: #f5f8fa;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* Inputs and buttons styling */
 input,
 button {
   padding: 10px;
-  margin: 5px;
+  margin: 5px 0;
   width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
 }
 
+/* Style for status indicator container */
 .status {
   font-weight: bold;
   padding: 10px;
@@ -20,18 +29,23 @@ button {
   display: inline-block;
 }
 
+/* Auth valid (green) */
 .status.valid {
   color: #2ecc71;
 }
 
+/* Auth invalid (red) */
 .status.invalid {
   color: #e74c3c;
 }
 
-.tab {
-  margin: 10px 0;
+/* Container for tabs */
+.x-tab {
+  margin: 10px 5px 10px 0;
+  display: inline-block;
 }
 
+/* Style for links in tabs */
 .x-tab a {
   text-decoration: none;
   padding: 10px 15px;
@@ -42,15 +56,31 @@ button {
   transition: background-color 0.3s ease;
 }
 
+/* Hover effect for tabs */
 .x-tab a:hover {
   background-color: #0d8ddb;
 }
 
+/* Buttons cursor pointer */
 button {
   cursor: pointer;
 }
 
+/* Disabled buttons */
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  input,
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .x-tab {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
