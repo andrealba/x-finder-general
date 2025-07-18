@@ -1,10 +1,26 @@
-/* styles.css - Stylesheet for X URL Generator */
+/* styles.css - Dracula Dark Theme for X URL Generator */
 
-/* Base styles for body and font */
+/* Dracula Theme Colors */
+:root {
+  --bg: #282a36;
+  --fg: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  --blue: #6272a4;
+}
+
+/* Base styles */
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
   padding: 20px;
-  background-color: #f5f8fa;
   margin: 0;
   box-sizing: border-box;
 }
@@ -15,13 +31,15 @@ button {
   padding: 10px;
   margin: 5px 0;
   width: 300px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--comment);
   border-radius: 4px;
   box-sizing: border-box;
   font-size: 1rem;
+  background-color: #44475a;
+  color: var(--fg);
 }
 
-/* Style for status indicator container */
+/* Status indicator styling */
 .status {
   font-weight: bold;
   padding: 10px;
@@ -31,12 +49,12 @@ button {
 
 /* Auth valid (green) */
 .status.valid {
-  color: #2ecc71;
+  color: var(--green);
 }
 
 /* Auth invalid (red) */
 .status.invalid {
-  color: #e74c3c;
+  color: var(--red);
 }
 
 /* Container for tabs */
@@ -45,34 +63,34 @@ button {
   display: inline-block;
 }
 
-/* Style for links in tabs */
+/* Tab link styling */
 .x-tab a {
   text-decoration: none;
   padding: 10px 15px;
   display: inline-block;
   border-radius: 6px;
-  background-color: #1da1f2;
-  color: white;
+  background-color: var(--purple);
+  color: var(--fg);
   transition: background-color 0.3s ease;
 }
 
-/* Hover effect for tabs */
+/* Hover effect */
 .x-tab a:hover {
-  background-color: #0d8ddb;
+  background-color: var(--pink);
 }
 
-/* Buttons cursor pointer */
+/* Button interactivity */
 button {
   cursor: pointer;
 }
 
-/* Disabled buttons */
+/* Disabled button styling */
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* Responsive adjustments */
+/* Responsive design */
 @media (max-width: 400px) {
   input,
   button {
