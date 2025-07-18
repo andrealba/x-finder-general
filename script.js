@@ -9,12 +9,12 @@ class XURLGenerator {
     this.apiToken = '';
     this.clientID = '';
     // Redirect URI set to current origin (can be customized)
-    // this.redirectURI = window.location.origin;
+    this.redirectURI = window.location.origin;
 
     // TODO: development only
     // this.redirectURI = 'http://localhost:5500/';
     // TODO: production only
-    this.redirectURI = 'https://andrealba.github.io/x-finder-general/';
+    // this.redirectURI = 'https://andrealba.github.io/x-finder-general/';
 
     // DOM reference to the auth status element
     this.authStatus = document.getElementById('authStatus');
@@ -23,6 +23,7 @@ class XURLGenerator {
     this.attachEvents();
     this.restoreTokens();
     this.updateAuthIndicator();
+    this.verifyToken();
   }
 
   /**
