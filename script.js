@@ -1,5 +1,3 @@
-// script.js
-
 import AuthManager from './auth.js';
 
 class XURLGenerator {
