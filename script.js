@@ -10,15 +10,9 @@ class XURLGenerator {
     this.clientID = '';
     // Redirect URI set to current origin (can be customized)
     this.redirectURI = window.location.origin;
-
-    // TODO: development only
-    // this.redirectURI = 'http://localhost:5500/';
-    // TODO: production only
-    // this.redirectURI = 'https://andrealba.github.io/x-finder-general/';
-
     // DOM reference to the auth status element
     this.authStatus = document.getElementById('authStatus');
-
+    this.userInfoBox = document.getElementById('userInfoBox');
     // Initialize event listeners and restore tokens from storage
     this.attachEvents();
     this.restoreTokens();
