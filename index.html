@@ -3,37 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X Finder General</title>
-
-    <!-- Link to external stylesheet -->
+    <meta
+      name="description"
+      content="X Finder General - Generate and test X.com API links with token auth"
+    />
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>X Finder General</title>
   </head>
   <body>
-    <!-- Authentication status indicator -->
-    <div id="authStatus" class="status">❌ Not Authenticated</div>
-    <br />
+    <div class="container">
+      <h1>X Finder General</h1>
 
-    <!-- Input fields for authentication and ID data -->
-    <input id="clientID" placeholder="Client ID" />
-    <input id="apiToken" placeholder="Bearer Token" />
-    <input id="communityID" placeholder="Community ID" />
-    <input id="listID" placeholder="List ID" />
-    <input id="userID" placeholder="User ID" />
+      <section>
+        <label for="bearerToken">Bearer Token:</label>
+        <input
+          type="text"
+          id="bearerToken"
+          placeholder="YOUR_BEARER_TOKEN_HERE"
+        />
 
-    <!-- ✅ INSERT THIS: Authenticated user info box -->
-    <div id="userInfoBox" style="margin-top: 1rem"></div>
+        <label for="clientID">Client ID:</label>
+        <input type="text" id="clientID" placeholder="YOUR_CLIENT_ID_HERE" />
 
-    <!-- Buttons for authentication actions -->
-    <button id="oauthBtn">Login with X</button>
-    <button id="logoutBtn">Logout</button>
+        <button id="oauthBtn">Login with OAuth</button>
+        <button id="logoutBtn">Logout</button>
+        <div id="authStatus" class="status-indicator">Token status</div>
+      </section>
 
-    <!-- Container where generated URLs will appear -->
-    <div id="urlContainer"></div>
+      <section>
+        <h2>Generate URLs</h2>
 
-    <!-- Link to external JavaScript file -->
+        <label for="communityID">Community ID:</label>
+        <input type="text" id="communityID" placeholder="Enter Community ID" />
+        <div class="link-group">
+          <a id="communityMembers" href="#" target="_blank"
+            >Community Members</a
+          >
+          <a id="communityMods" href="#" target="_blank"
+            >Community Moderators</a
+          >
+        </div>
+
+        <label for="listID">List ID:</label>
+        <input type="text" id="listID" placeholder="Enter List ID" />
+        <div class="link-group">
+          <a id="listFwers" href="#" target="_blank">List Followers</a>
+          <a id="listMembers" href="#" target="_blank">List Members</a>
+        </div>
+
+        <label for="userID">User ID:</label>
+        <input type="text" id="userID" placeholder="Enter User ID" />
+        <div class="link-group">
+          <a id="userFwers" href="#" target="_blank">User Followers</a>
+          <a id="userFwing" href="#" target="_blank">User Following</a>
+          <a id="verifiedFwers" href="#" target="_blank">Verified Followers</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Authenticated User</h2>
+        <div id="userInfoBox" class="user-info-box"></div>
+      </section>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
