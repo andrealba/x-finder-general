@@ -2,6 +2,3 @@
 node_modules/
 .history/
 # ignore files
-# if introducing sensitive information in environment variables via .env.development and .env.production:
-# .env.development
-# .env.production
